@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC01-2TRI</title>
+    <script src="script.js"></script>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<body>
+    <h1>EX-01</h1>
+
+    <h3>Tipo de carro:</h3>
+    <p>1 - Comum: R$2,50 por km</p>
+    <p>2 - Premium: R$4,50 por km</p>
+    <p>3 - VIP: R$7,80 por km</p>
+    <input type="number" id="tipoCarro" placeholder="Digite o tipo de carro" >
+
+    <h3>Dia da Semana</h3>
+    <p>1 - Segunda-feira</p>
+    <p>2 - Terça-feira</p>
+    <p>3 - Quarta-feira</p>
+    <p>4 - Quinta-feira</p>
+    <p>5 - Sexta-feira</p>
+    <p>6 - Sábado</p>
+    <p>7 - Domingo</p>
+    <input type="number" id="diaSemana" placeholder="Digite o dia da semana">
+    <p>Hora de entrada:</p>
+    <input type="number" id="horaEntrada" placeholder="Digite a hora de entrada">
+    <p>Digite os minutos:</p>
+    <input type="number" id="minutosEntrada" placeholder="Digite os minutos">
+    <p>Digite a distancia:</p>
+    <input type="number" id="distancia" placeholder="Digite a distancia">
+
+    <button onclick="ex1()">Verificar</button>
+    <p id="resposta1"></p>
+
+
+
+
+
+    <h1>EX-02</h1>
+    <h3>Situação do Saldo:</h3>
+    <p><strong>Saldo:</strong> Até R$1300,00 <strong>Credito:</strong> 20%</strong></p>
+    <p><strong>Saldo:</strong> Maior que R$ 1300,00 até R$3000,00 <strong>Credito:</strong> 30%</p>
+    <p><strong>Saldo:</strong> Maior que R$3000,00 até R$8000,00 <strong>Credito:</strong> 45%</p>
+    <p><strong>Saldo:</strong> Maior que R$8000,00 até R$10000,00 <strong>Credito:</strong> 50%</p>
+    <p><strong>Saldo:</strong> Acima de R$10000,00 <strong>Credito:</strong> 60%</p>
+
+    <input type="number" id="situacaoSaldo" placeholder="Digite sua situação">
+    <button onclick="ex2()">Verificar</button>
+
+    <p id="resposta2"></p>
+
+
+
+
+
+    <h1>EX-03</h1>
+
+
+
+
+</body>
+
+</html>
