@@ -1,44 +1,71 @@
-function ex1() {
-  let tipoCarro = parseInt(document.getElementById("tipoCarro").value)
-  let dia = parseInt(document.getElementById("diaSemana").value)
-  let hora = parseInt(document.getElementById("horaEntrada").value)
-  let minutos = parseInt(document.getElementById("minutosEntrada").value)
-  let distancia = parseFloat(document.getElementById("distancia").value)
+function Calcular(){
+    let Carro=parseFloat(document.getElementById("Carro").value)
+    let Distância=parseFloat(document.getElementById("Distância").value)
+    let Horas=parseFloat(document.getElementById("Horas").value)
+    let Dia=parseFloat(document.getElementById("Dia").value)
+    let Total = 0
 
-  let precoKm = 0
-  if (tipoCarro === 1) {
-    precoKm = 2.50
-  }
-  else if (tipoCarro === 2) {
-    precoKm = 4.50
-  } else {
-    precoKm = 7.80
-  }
-
-  let preco = precoKm * distancia;
-
-  let madrugada = hora >= 0 && hora < 6
-  let horarioPico = (hora >= 6 && hora < 10) || (hora >= 17 && hora < 20)
-  let domingoBaixa = dia === 7 && hora >= 15 && hora < 17
-  let viagemLonga = distancia > 100
-
-  if (madrugada) {
-    preco += preco * 0.20
-  }
-
-  if (dia >= 1 && dia <= 5 && horarioPico) {
-    preco += preco * 0.15
-  }
-
-  if (domingoBaixa) {
-    preco -= preco * 0.10
-  }
-
-  if (viagemLonga) {
-    preco += 50
-  }
-
-  document.getElementById("resposta1").innerText = "Valor total da viagem: R$ " + preco.toFixed(2)
+    if(Carro == 1 && Distância <= 100 && Horas == 1 && Dia <=7){
+        Total = (Distância*2.5)*1.20
+    }
+    if(Carro == 1 && Distância > 100 && Horas == 1 && Dia <=7){
+        Total = ((Distância*2.5)*1.20) + 50
+    }
+    if(Carro == 1 && Distância <= 100 && Horas == 2 && Dia <=5){
+        Total = (Distância*2.5)*1.15
+    }
+    if(Carro == 1 && Distância > 100 && Horas == 2 && Dia <=5){
+        Total = ((Distância*2.5)*1.15) + 50
+    }
+    if(Carro == 1 && Distância <= 100 && Horas == 3 && Dia == 7){
+        Total = (Distância*2.5)*0.9
+    }
+    if(Carro == 1 && Distância > 100 && Horas == 3 && Dia == 7){
+        Total = ((Distância*2.5)*0.9) + 50
+    }
+    if(Carro == 2 && Distância <= 100 && Horas == 1 && Dia <=7){
+        Total = (Distância*4.5)*1.20
+    }
+    if(Carro == 2 && Distância > 100 && Horas == 1 && Dia <=7){
+        Total = ((Distância*4.5)*1.20) + 50
+    }
+    if(Carro == 2 && Distância <= 100 && Horas == 2 && Dia <=5){
+        Total = (Distância*4.5)*1.15
+    }
+    if(Carro == 2 && Distância > 100 && Horas == 2 && Dia <=5){
+        Total = ((Distância*4.5)*1.15) + 50
+    }
+    if(Carro == 2 && Distância <= 100 && Horas == 3 && Dia == 7){
+        Total = (Distância*4.5)*0.9
+    }
+    if(Carro == 2 && Distância > 100 && Horas == 3 && Dia == 7){
+        Total = ((Distância*4.5)*0.9) + 50
+    }
+    if(Carro == 3 && Distância <= 100 && Horas == 1 && Dia <=7){
+        Total = (Distância*7.8)*1.20
+    }
+    if(Carro == 3 && Distância > 100 && Horas == 1 && Dia <=7){
+        Total = ((Distância*7.8)*1.20) + 50
+    }
+    if(Carro == 3 && Distância <= 100 && Horas == 2 && Dia <=5){
+        Total = (Distância*7.8)*1.15
+    }
+    if(Carro == 3 && Distância > 100 && Horas == 2 && Dia <=5){
+        Total = ((Distância*7.8)*1.15) + 50
+    }
+    if(Carro == 3 && Distância <= 100 && Horas == 3 && Dia == 7){
+        Total = (Distância*7.8)*0.9
+    }
+    if(Carro == 3 && Distância > 100 && Horas == 3 && Dia == 7){
+        Total = ((Distância*7.8)*0.9) + 50
+    }
+    if(Horas == 3 && Dia <=6){
+        alert("A tarifa de baixíssima demanda é somente no dia 7 (Domingo)")
+    }
+    if(Carro <=0 || Carro > 3 || Distância <=0 || Horas <=0 || Horas > 3 || Dia <=0 || Dia > 7){
+        alert("Valores inválidos! Por favor insira um número de acordo com as informações pedidas abaixo.")
+    }
+    document.getElementById("resposta1").innerHTML=`O valor total da viagem foi de R$${Total.toFixed(2)}`
 }
 
 
@@ -65,4 +92,27 @@ function ex2() {
     valorFinal = situacaoSaldo * valorCredito
 
     document.getElementById("resposta2").innerHTML = `O valor com Crédito é R$` + valorFinal
+}
+
+
+
+function ex3() {
+  var altura = parseFloat(document.getElementById("altura").value)
+  var peso = parseFloat(document.getElementById("peso").value)
+  var imc = peso / (altura * altura)
+  var resultadoConta = ''
+
+
+  if (imc < 18.5) {
+    resultadoConta = `Seu IMC é ${imc.toFixed(2)}, voce está abaixo do peso.`
+  } else if (imc >= 18.5 && imc <= 24.9) {
+    resultadoConta = `Seu IMC é ${imc.toFixed(2)}, voce está com peso normal.`
+  } else if (imc >= 25 && imc <= 29.9) {
+    resultadoConta = `Seu IMC é ${imc.toFixed(2)}, voce esta com sobrepeso.`
+  } else if (imc >= 30) {
+    resultadoConta = `Seu IMC é ${imc.toFixed(2)}, voce esta com obesidade.`
+  }
+
+
+  document.getElementById("resposta3").innerHTML = resultadoConta
 }

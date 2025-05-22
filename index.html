@@ -15,34 +15,36 @@
 
 <body>
     <h1>EX-01</h1>
+    <h3>Tipos de Carro</h3>
+    <p>1 - Comum (R$ 2,50 por KM)</p>
+    <p>2 - Premium (R$ 4,50 por KM)</p>
+    <p>3 - VIP (R$ 7,80 por KM)</p>
 
-    <h3>Tipo de carro:</h3>
-    <p>1 - <strong>Comum:</strong> R$2,50 por km</p>
-    <p>2 - <strong>Premium:</strong> R$4,50 por km</p>
-    <p>3 - <strong>VIP:</strong> R$7,80 por km</p>
-    <input type="number" id="tipoCarro" placeholder="Digite o tipo de carro" >
+    <h3>Tipos de horários para viagem:</h3>
+    <p>1 - Madrugada (0:00 às 6:00) </p>
+    <p>2 - Horário de Pico (6:00 às 10:00 e 17:00 às 20:00)</p>
+    <p>3 - Horário de baixíssima demanda (15:00 às 17:00)</p>
 
-    <h3>Dia da Semana</h3>
-    <p>1 - Segunda-feira</p>
-    <p>2 - Terça-feira</p>
-    <p>3 - Quarta-feira</p>
-    <p>4 - Quinta-feira</p>
-    <p>5 - Sexta-feira</p>
-    <p>6 - Sábado</p>
-    <p>7 - Domingo</p>
-    <input type="number" id="diaSemana" placeholder="Digite o dia da semana">
-    <p>Hora de entrada:</p>
-    <input type="number" id="horaEntrada" placeholder="Digite a hora de entrada">
-    <p>Digite os minutos:</p>
-    <input type="number" id="minutosEntrada" placeholder="Digite os minutos">
-    <p>Digite a distancia:</p>
-    <input type="number" id="distancia" placeholder="Digite a distancia">
+    <h3>Dias da viagem:</h3>
+    <p>1-Segunda</p>
+    <p>2-Terça</p>
+    <p>3-Quarta</p>
+    <p>4-Quinta</p>
+    <p>5-Sexta</p>
+    <p>6-Sábado</p>
+    <p>7-Domingo</p>
 
+  
+    <input type="number" id="Carro" placeholder="Digite o tipo do carro">
+    <br></br>
+    <input type="number" id="Distância" placeholder="Digite a distância total">
+    <br></br>
+    <input type="number" id="Horas" placeholder="Digite a hora da viagem">
+    <br></br>
+    <input type="number" id="Dia" placeholder="Digite o dia da viagem">
     <button onclick="ex1()">Verificar</button>
+    
     <p id="resposta1"></p>
-
-
-
 
 
     <h1>EX-02</h1>
@@ -57,6 +59,15 @@
     <button onclick="ex2()">Verificar</button>
 
     <p id="resposta2"></p>
+
+
+    <h1>EX-03</h1>
+    <p>Calculadora de IMC</p>
+    <input id="altura" type="number" placeholder="Altura">
+    <input id="peso" type="number" placeholder="Peso">
+    <button onclick="ex3()">Verificar</button>
+    <p id="resposta3"></p>
+
 </body>
 
 </html>
