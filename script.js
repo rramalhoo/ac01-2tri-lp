@@ -97,10 +97,10 @@ function ex2() {
 
 
 function ex3() {
-  var altura = parseFloat(document.getElementById("altura").value)
-  var peso = parseFloat(document.getElementById("peso").value)
-  var imc = peso / (altura * altura)
-  var resultadoConta = ''
+  let altura = parseFloat(document.getElementById("altura").value)
+  let peso = parseFloat(document.getElementById("peso").value)
+  let imc = peso / (altura * altura)
+  let resultadoConta = ''
 
 
   if (imc < 18.5) {
